@@ -4,4 +4,4 @@ const isDrunk = false;
 
 const canDrive = hasLicence && (age >=18) && !isDrunk;
 
-console.log(`Может ли сесть за руль? ${canDrive ? 'Да' : 'Нет'}`);
+console.log(`Может ли сесть за руль? ${canDrive ? 'Может' : 'Не может'}`);
