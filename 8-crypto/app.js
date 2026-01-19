@@ -3,17 +3,16 @@ const password = 'qwerty';
 
 const crypto = (el) => {
 	let passArr = el.split('');
-	console.log(passArr);
 	passArr.reverse();
-	return passArr.concat(passArr.slice(-2));
+	let newPassArr = passArr.concat(passArr.slice(-2));
+	return newPassArr.join('');
 }
 
 const check = (el, elCrypto) => {
-	console.log(el, elCrypto);
-	elCrypto.splice(-2);
-	elCrypto.reverse();
-	console.log(elCrypto);
-	if (elCrypto.join('') === el) {
+	let elCryptoArr = elCrypto.split('');
+	elCryptoArr.splice(-2);
+	elCryptoArr.reverse();
+	if (elCryptoArr.join('') === el) {
 		return true;
 	} else {
 		return false;
@@ -21,3 +20,4 @@ const check = (el, elCrypto) => {
 }
 
 check(password, crypto(password));
+console.log(check(password, crypto(password)));
